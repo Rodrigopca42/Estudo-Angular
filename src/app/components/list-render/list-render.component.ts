@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Cars } from 'src/app/Car';
+
 @Component({
   selector: 'app-list-render',
   templateUrl: './list-render.component.html',
@@ -7,16 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListRenderComponent implements OnInit {
 
-  carros = [
-    {name: 'Maverik', type: 'Ford'},
-    {name: 'Opala cupê', type: 'Ford'},
-    {name: 'HR-V', type: 'Honda'},
-    {name: 'Civic', type: 'Honda'},
+  carros: Cars[]=[
+    {name: 'Maverick', type: 'Ford',age: 1969 },
+    {name: 'Opala Coupe', type: 'Ford',age: 1970},
+    {name: 'HR-V', type: 'Honda',age: 2019},
+    {name: 'Civic', type: 'Honda',age: 2020}
   ];
+
+  carroDetails = '';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showAge(carros:Cars): void{
+    this.carroDetails=`O ${carros.name}, foi fabricado em ${carros.age}, sendo eleito o CARRO DESSE ANO!`;
   }
 
 }

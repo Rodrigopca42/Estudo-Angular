@@ -2,6 +2,9 @@
   <h2>Carros:</h2>
   <ul>
     <li *ngFor="let carros of carros">
-      Nome:{{carros.name}} - Fabricado pela: {{carros.type}} </li>
+      Nome:{{carros.name}} - Fabricado pela: {{carros.type}}
+      <button (click)="showAge(carros)">Show Age</button>
+    </li>
   </ul>
+  <h3>{{ carroDetails }}</h3>
 </div>
