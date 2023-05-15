@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListRenderComponent implements OnInit {
 
+  carros = [
+    {name: 'Maverik', type: 'Ford'},
+    {name: 'Opala cupê', type: 'Ford'},
+    {name: 'HR-V', type: 'Honda'},
+    {name: 'Civic', type: 'Honda'},
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
