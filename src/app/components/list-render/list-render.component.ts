@@ -11,16 +11,13 @@ import { ListService } from 'src/app/services/list.service';
 })
 export class ListRenderComponent implements OnInit {
 
-  carros: Cars[]=[
-    {name: 'Maverick', type: 'Ford',age: 1969 },
-    {name: 'Opala Coupe', type: 'Ford',age: 1970},
-    {name: 'HR-V', type: 'Honda',age: 2019},
-    {name: 'Civic', type: 'Honda',age: 2020}
-  ];
+  carros: Cars[]=[];
 
   carroDetails = '';
 
-  constructor( private listService: ListService ) { }
+  constructor( private listService: ListService ) {
+    this.getCarros()
+  }
 
   ngOnInit(): void {
   }
@@ -32,6 +29,10 @@ export class ListRenderComponent implements OnInit {
   removeCarros(carros: Cars){
     console.log('Removendo Carros...');
     this.carros = this.listService.remove(this.carros, carros)
+  }
+
+  getCarros(): void{
+    this.listService.getAll().subscribe((Cars) => (this.carros = Cars));
   }
 
 }

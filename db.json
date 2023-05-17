@@ -1,0 +1,8 @@
+{
+  "carros": [
+    {"id": 1, "name": "Maverick", "type": "Ford","age": 1969 },
+    {"id": 2, "name": "Opala Coupe", "type": "Ford","age": 1970},
+    {"id": 3, "name": "HR-V", "type": "Honda","age": 2019},
+    {"id": 4, "name": "Civic", "type": "Honda","age": 2020}
+  ]
+}
