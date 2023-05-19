@@ -8,6 +8,7 @@ import { IfRenderComponent } from './components/if-render/if-render.component';
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 const routes: Routes = [
   { path:'', component: NavComponent, children:[
@@ -16,6 +17,7 @@ const routes: Routes = [
     {path:'eventos', component: EventosComponent},
     {path:'if-render', component: IfRenderComponent},
     {path:'list-render', component: ListRenderComponent},
+    {path:'list-render/:id', component: ItemDetailComponent},
     {path:'pipes', component: PipesComponent},
     {path:'two-way-binding', component: TwoWayBindingComponent}
 ]}

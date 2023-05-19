@@ -13,6 +13,7 @@ import { ListRenderComponent } from './components/list-render/list-render.compon
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { NavComponent } from './components/nav/nav.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 
 
@@ -27,7 +28,8 @@ import { NavComponent } from './components/nav/nav.component';
     ListRenderComponent,
     PipesComponent,
     TwoWayBindingComponent,
-    NavComponent
+    NavComponent,
+    ItemDetailComponent
   ],
   imports: [
     BrowserModule,
